@@ -1,62 +1,105 @@
-const express = require('express');
-const app = express();
-
-app.get('/consultants', (req, res) => {
-  const syllabus = [
-    {
-      id: 1,
-      title: "Aperçu global sur les démarches et tendances de développement de solutions et services informatiques",
-      description: "Introduction aux tendances actuelles et démarches agiles dans le développement de solutions cloud."
-    },
-    {
-      id: 2,
-      title: "Développement d’applications & Cloud : options, avantages et process",
-      description: "Exploration des options, avantages et processus pour développer des applications dans le cloud."
-    },
-    {
-      id: 3,
-      title: "Développement et déploiement d’applications web sur le Cloud",
-      description: "Techniques pour développer et déployer des applications web sur Azure."
-    },
-    {
-      id: 4,
-      title: "Déploiement et Gestion des Conteneurs",
-      description: "Utilisation de conteneurs avec Docker et orchestration via Azure Kubernetes Service (AKS)."
-    },
-    {
-      id: 5,
-      title: "Développement d'API",
-      description: "Conception, gestion et sécurisation d'APIs RESTful avec Azure API Management."
-    },
-    {
-      id: 6,
-      title: "Fonctions & logiques métiers sous Cloud",
-      description: "Création de fonctions serverless et logiques métiers avec Azure Functions et Logic Apps."
-    },
-    {
-      id: 7,
-      title: "Gestion et automatisation des workflows",
-      description: "Automatisation des flux de travail avec Azure Logic Apps et Event Grid."
-    },
-    {
-      id: 8,
-      title: "Optimisation avec le Cache Redis",
-      description: "Utilisation d'Azure Cache for Redis pour optimiser les performances des applications."
-    },
-    {
-      id: 9,
-      title: "Surveillance, monitoring et suivi des performances des applications Cloud",
-      description: "Mise en place de la surveillance avec Azure Monitor et Application Insights."
-    },
-    {
-      id: 10,
-      title: "Préparation du certificat : Microsoft Azure Developer Associate (AZ-204)",
-      description: "Préparation à l'examen AZ-204 avec révision et projets pratiques."
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Inspirée d'Eqdom</title>
+  <style>
+    /* Style général */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
     }
-  ];
-  res.json(syllabus);
-});
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Server running');
-});
+    /* En-tête */
+    header {
+      background-color: #e60012;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 150px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Contenu principal */
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .main-content .left, .main-content .right {
+      width: 48%;
+    }
+
+    /* Pied de page */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header>
+    <img src="https://www.eqdom.ma/logo.png" alt="Logo Eqdom">
+    <h1>Bienvenue sur notre site</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#produits">Nos Produits</a>
+    <a href="#simulation">Simulation</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="main-content">
+    <div class="left">
+      <h2>Nos Produits</h2>
+      <p>Découvrez nos offres de crédit adaptées à vos besoins.</p>
+    </div>
+    <div class="right">
+      <h2>Simulation de Crédit</h2>
+      <p>Simulez votre crédit en ligne en quelques clics.</p>
+    </div>
+  </div>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Eqdom. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
